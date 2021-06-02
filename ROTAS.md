@@ -5,7 +5,7 @@
 - Delete JSON body(username): delete a user
 
 /user
-- Post JSON body(username): return a single user
+- Post JSON body(username): return a single user(Login)
 
 /followers
 - Get JSON body(username): return an array of followers
