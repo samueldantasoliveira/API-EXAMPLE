@@ -25,7 +25,7 @@ async function createUser(req, res){
         }
         const user = await User.create(newUser)
         if(!user)throw new Error("Erro ao criar usuário")
-        res.send(user) 
+        res.status(201).send(user) 
     }catch(err){
         res.status(500).send(err.message)
     }

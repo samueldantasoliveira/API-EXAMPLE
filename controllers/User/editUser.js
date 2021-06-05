@@ -52,7 +52,7 @@ async function editUser(req, res){
             username: newUser.username
             }
         });
-        res.send("User updated")
+        res.status(200).send(newUser)
     } catch(err){
         res.status(500).send(err.message)
     }

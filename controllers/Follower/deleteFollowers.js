@@ -9,12 +9,13 @@ async function deleteFollowers(req, res){
             followed_username
         } = req.body
         if(!follower_username || !followed_username)throw new Error("Dados em branco")
-        await Follower.findOne({
+        const Followers = await Follower.findOne({
             where: {
                 follower_username: follower_username,
                 followed_username: followed_username
             }
         })
+        if(!Followers)throw new Error("Not found")
         await Follower.destroy({
             where: {
                 follower_username: follower_username,

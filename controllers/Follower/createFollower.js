@@ -15,7 +15,7 @@ async function createFollower(req, res){
         if(follower==followed)throw new Error("Os usuários são iguais")
 
         const follow = await Follower.create({follower_username: follower, followed_username: followed})
-        res.send(follow) 
+        res.status(201).send(follow) 
     }catch(err) {
         res.status(500).send(err.message)
     }    

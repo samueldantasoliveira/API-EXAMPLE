@@ -17,7 +17,7 @@ async function editFollowers(req, res){
                 followed_username: followed_username
             }
         })
-        res.send("followers updated")
+        res.status(200).send(follower)
     }catch(err){
         res.status(500).send(err.message)
     }
