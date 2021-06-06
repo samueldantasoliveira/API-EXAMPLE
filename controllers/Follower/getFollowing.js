@@ -1,12 +1,11 @@
 const Follower = require('../../models/Follower')
 const User = require('../../models/User')
 
-async function getFollower(req, res){
+async function getFollowing(req, res){
     try{
         await User.sync()
         await Follower.sync()
         const username = req.body.username
-
         if(!username)throw new Error("Dados em branco")
         const user = await User.findOne(
             {
@@ -14,26 +13,26 @@ async function getFollower(req, res){
             }
         )
         if(!user)throw new Error("Usuário não encontrado")
-        const followers = await Follower.findAll(
+        const following = await Follower.findAll(
             {
-                where: { followed_username: username}
+                where: { follower_username: username}
             }
         )
-            
+        
         const users = new Array
-        for (const follower of followers) {
+        for (const followed of following) {
             users.push(
                 await User.findOne(
-                    {where: { username: follower.dataValues.follower_username}}
+                    {where: { username: followed.dataValues.followed_username}}
                 ),
             ) 
         }
-        
         res.send(users)
-    }catch(err) {
+    }catch(err){
         res.status(500).send(err.message)
     }
-        
     
+
 }
-module.exports = getFollower
+
+module.exports = getFollowing

@@ -1,9 +1,11 @@
 const Follower = require('../../models/Follower')
+const User = require('../../models/User')
 
 async function deleteFollowers(req, res){
     try{
+        await User.sync()
         await Follower.sync()
-    
+        
         const {
             follower_username,
             followed_username

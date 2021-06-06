@@ -14,6 +14,7 @@ const editUser = require('./controllers/User/editUser')
 const deleteUser = require('./controllers/User/deleteUser')
 const createFollower = require('./controllers/Follower/createFollower');
 const getFollowers = require('./controllers/Follower/getFollowers')
+const getFollowing = require('./controllers/Follower/getFollowing')
 const editFollowers = require('./controllers/Follower/editFollowers')
 const deleteFollowers = require('./controllers/Follower/deleteFollowers')
 
@@ -42,6 +43,9 @@ app.post('/followers', (req, res) => {
 
 app.get('/followers', (req, res) => {
   getFollowers(req, res)
+})
+app.get('/following', (req, res) => {
+  getFollowing(req, res)
 })
 
 app.put('/followers', (req, res) => {
