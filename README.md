@@ -1,7 +1,8 @@
 # API-EXAMPLE
 
 > Status: Developing ⚠️
-### It is a Simple API with JavaScript, NodeJS, Sequelize and Express, where I did a CRUD of a Github account and a CRUD of Followers between this accounts
+## Description:
+It is a Simple API with JavaScript, NodeJS, Sequelize and Express, where I did a CRUD of a Github account and a CRUD of Followers between this accounts
 
 
 ## The Account Model fields:
