@@ -15,8 +15,10 @@ const deleteUser = require('./controllers/User/deleteUser')
 const createFollower = require('./controllers/Follower/createFollower');
 const getFollowers = require('./controllers/Follower/getFollowers')
 const getFollowing = require('./controllers/Follower/getFollowing')
-const editFollowers = require('./controllers/Follower/editFollowers')
 const deleteFollowers = require('./controllers/Follower/deleteFollowers')
+const createRepositories = require('./controllers/Repository/createRepositories')
+const getRepositories = require('./controllers/Repository/getRepositories')
+const deleteRepository = require('./controllers/Repository/deleteRepository')
 
 app.get('/users', (req, res) => {
   getUsers(req, res)
@@ -44,16 +46,25 @@ app.post('/followers', (req, res) => {
 app.get('/followers', (req, res) => {
   getFollowers(req, res)
 })
+
 app.get('/following', (req, res) => {
   getFollowing(req, res)
 })
 
-app.put('/followers', (req, res) => {
-  editFollowers(req, res)
-})
-
 app.delete('/followers', (req, res) => {
   deleteFollowers(req, res)
+})
+
+app.post('/repositories', (req, res) => {
+  createRepositories(req, res)
+})
+
+app.post('/repository', (req, res) => {
+  getRepositories(req, res)
+})
+
+app.delete('/repositories', (req, res) => {
+  deleteRepository(req, res)
 })
 
 app.listen(port, () => {
