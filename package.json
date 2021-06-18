@@ -10,5 +10,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Samuel Oliveira <Samuel.0913@outlook.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  }
 }
