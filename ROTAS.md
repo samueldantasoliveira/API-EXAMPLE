@@ -10,5 +10,11 @@
 /followers
 - Get JSON body(username): return an array of followers
 - Post JSON body(follower, followed): create a follower
-- Put JSON body(follower_username, followed_username, newFollowed_username): update a follower
 - Delete JSON body(follower, followed): delete a user
+
+/repository
+- Post JSON body(id): return the user repository 
+
+/repositories
+- Post JSON body(user_id, nome, description, public): create a repository
+- Delete JSON body(id): delete a repository

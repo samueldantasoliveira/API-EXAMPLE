@@ -2,8 +2,7 @@
 
 > Status: Developing ⚠️
 ## Description:
-It is a Simple API with JavaScript, NodeJS, Sequelize and Express, where I did a CRUD of a Github account and a CRUD of Followers between this accounts
-
+It is a Simple API with JavaScript, NodeJS, Sequelize and Express, where I did a CRUD of a Github account a CRUD of Followers between this accounts and a CRUD of Repositories
 
 ## The Account Model fields:
 
@@ -27,14 +26,23 @@ It is a Simple API with JavaScript, NodeJS, Sequelize and Express, where I did a
 + data
 + user_id
 
+## The Repository model fields:
++ id
++ nome
++ description
++ public
++ user_id
+
 ## In addition to CRUD, I implement other features such as:
 + Login -> The Request send a username and the API search that on the Database and return the Account creating a log 
 
 ## This features are in developing:
-+ CRUD of Repositores
 + CRUD of Repository's stars
 
 ## How to run the application:
 1) Run Shell: npm/yarn install
 2) Run Shell: node app.js
-3) Make a request to http://localhost:3000 [Routes](https://github.com/samueldantasoliveira/API-EXAMPLE/blob/main/ROTAS.md)
+3) Make a request to http://localhost:3000 [See the Routes here](https://github.com/samueldantasoliveira/API-EXAMPLE/blob/main/ROTAS.md)
+
+## Or make a request to the API:
+https://api-github-samuel.herokuapp.com/ [See the Routes here](https://github.com/samueldantasoliveira/API-EXAMPLE/blob/main/ROTAS.md)
