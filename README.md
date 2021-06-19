@@ -42,7 +42,7 @@ It is a Simple API with JavaScript, NodeJS, Sequelize and Express, where I did a
 ## How to run the application:
 1) Run Shell: npm/yarn install
 2) Run Shell: node app.js
-3) Make a request to http://localhost:3000 [See the Routes here](https://github.com/samueldantasoliveira/API-EXAMPLE/blob/main/ROTAS.md)
+3) Make a request to http://localhost:3000/ 👉 [See the Routes here](https://github.com/samueldantasoliveira/API-EXAMPLE/blob/main/ROTAS.md)
 
 ## Or make a request to the API:
-https://api-github-samuel.herokuapp.com/ [See the Routes here](https://github.com/samueldantasoliveira/API-EXAMPLE/blob/main/ROTAS.md)
+https://api-github-samuel.herokuapp.com/ 👉 [See the Routes here](https://github.com/samueldantasoliveira/API-EXAMPLE/blob/main/ROTAS.md)
