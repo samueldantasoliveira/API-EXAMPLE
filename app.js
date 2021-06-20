@@ -18,6 +18,10 @@ const deleteFollowers = require('./controllers/Follower/deleteFollowers')
 const createRepositories = require('./controllers/Repository/createRepositories')
 const getRepositories = require('./controllers/Repository/getRepositories')
 const deleteRepository = require('./controllers/Repository/deleteRepository')
+const createStar = require('./controllers/Star/createStar');
+const deleteStar = require('./controllers/Star/deleteStar');
+const getRepoStars = require('./controllers/Star/getRepoStars');
+const getUserStars = require('./controllers/Star/getUserStars');
 
 app.get('/users', (req, res) => {
   getUsers(req, res)
@@ -64,6 +68,22 @@ app.post('/repository', (req, res) => {
 
 app.delete('/repositories', (req, res) => {
   deleteRepository(req, res)
+})
+
+app.post('/star', (req, res) => {
+  createStar(req, res)
+})
+
+app.delete('/star', (req, res) =>{
+  deleteStar(req, res)
+})
+
+app.get('/stars', (req, res) => {
+  getRepoStars(req, res)
+})
+
+app.get('/star', (req, res) => {
+  getUserStars(req, res)
 })
 
 app.listen(process.env.PORT || 3000)

@@ -3,20 +3,20 @@ const Repository = require('../../models/Repository')
 
 async function deleteRepository(req, res){
     try{
-        User.sync()
-        Repository.sync()
+        await User.sync()
+        await Repository.sync()
 
         const id = req.body.id
         if(!id)throw new Error("Id em branco")
 
-        const repository = Repository.findOne({
+        const repository = await Repository.findOne({
             where: {
                 id: id
             }
         })
         if(!repository)throw new Error("Erro ao deletar repositório")
 
-        Repository.destroy({
+        await Repository.destroy({
             where: {
                 id: id
             }

@@ -13,7 +13,7 @@ async function createRepositories(req, res){
             public
         } = req.body
 
-        const user = User.findOne({
+        const user = await User.findOne({
             where: {
                 Id: user_id
             }
