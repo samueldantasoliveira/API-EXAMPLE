@@ -2,7 +2,7 @@
 
 > Status: Developing ⚠️
 ## Description:
-It is a Simple API with JavaScript, NodeJS, Sequelize and Express, where I did a CRUD of a Github account a CRUD of Followers between this accounts and a CRUD of Repositories
+It is a Simple API with JavaScript, NodeJS, Sequelize and Express, where I did a CRUD of a Github account a CRUD of Followers between this accounts, CRUD of Repositories and Stars
 
 ## The Account Model fields:
 
@@ -33,11 +33,16 @@ It is a Simple API with JavaScript, NodeJS, Sequelize and Express, where I did a
 + public
 + user_id
 
+## The Stars model fields:
++ id
++ user_id
++ repository_id
+
 ## In addition to CRUD, I implement other features such as:
 + Login -> The Request send a username and the API search that on the Database and return the Account creating a log 
 
 ## This features are in developing:
-+ CRUD of Repository's stars
+
 
 ## How to run the application:
 1) Run Shell: npm/yarn install
