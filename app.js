@@ -6,6 +6,8 @@ const upload = multer({ dest: "images/" })
 const bodyParser = require('body-parser')
 app.use(bodyParser.json()) // for parsing application/json
 
+app.use(cors())
+
 const getUsers = require('./controllers/User/getUsers')
 const login = require('./controllers/User/login')
 const createUser = require('./controllers/User/createUser')
