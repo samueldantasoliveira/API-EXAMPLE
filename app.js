@@ -2,6 +2,7 @@ const express = require('express');
 const app = express()
 const multer = require("multer")
 const upload = multer({ dest: "images/" })
+const cors = require('cors')
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.json()) // for parsing application/json
